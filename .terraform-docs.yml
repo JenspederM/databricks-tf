@@ -1,6 +1,5 @@
-formatter: "md" # this is required
+formatter: "markdown document" # this is required
 
-version: "0.0.1"
 
 header-from: main.tf
 footer-from: ""
@@ -19,8 +18,8 @@ sections:
 content: ""
 
 output:
-  file: ""
-  mode: inject
+  file: "README.md"
+  mode: replace
   template: |-
     <!-- BEGIN_TF_DOCS -->
     {{ .Content }}
