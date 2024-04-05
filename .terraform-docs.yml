@@ -14,7 +14,7 @@ sections:
   hide-all: false # deprecated in v0.13.0, removed in v0.15.0
   show-all: true  # deprecated in v0.13.0, removed in v0.15.0
 
-content: "{{ .Header }}\n{{ .Footer }}\n{{ .Inputs }}\n{{ .Modules }}\n{{ .Outputs }}\n{{ .Providers }}\n{{ .Requirements }}\n{{ .Resources }}"
+content: "{{ .Header }}\n\n{{ .Requirements }}\n{{ .Inputs }}\n{{ .Outputs }}\n{{ .Modules }}\n{{ .Resources }}\n{{ .Footer }}"
 
 output:
   file: "README.md"

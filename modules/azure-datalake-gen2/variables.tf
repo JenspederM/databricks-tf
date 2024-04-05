@@ -1,6 +1,6 @@
 variable "name" {
   type        = string
-  description = "The name of the module"
+  description = "The name of the storage account"
 }
 variable "resource_group_name" {
   type        = string

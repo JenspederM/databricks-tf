@@ -3,11 +3,17 @@
 <!-- BEGIN_TF_DOCS -->
 
 
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.6.2 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.98 |
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | The name of the module | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the storage account | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group | `string` | n/a | yes |
 | <a name="input_access_tier"></a> [access\_tier](#input\_access\_tier) | The access tier of the storage account | `string` | `"Hot"` | no |
 | <a name="input_account_replication_type"></a> [account\_replication\_type](#input\_account\_replication\_type) | The replication type of the storage account | `string` | `"LRS"` | no |
@@ -20,25 +26,14 @@
 | <a name="input_readers"></a> [readers](#input\_readers) | A list of object ids to assign as 'Storage Blob Data Reader' to the storage account | `list(string)` | `[]` | no |
 | <a name="input_sftp_enabled"></a> [sftp\_enabled](#input\_sftp\_enabled) | Enable SFTP on the storage account | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to the resources | `map(string)` | `{}` | no |
-## Modules
-
-No modules.
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_storage_account"></a> [storage\_account](#output\_storage\_account) | The created storage account |
-## Providers
+## Modules
 
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.98.0 |
-## Requirements
-
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.6.2 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.98 |
+No modules.
 ## Resources
 
 | Name | Type |

@@ -3,21 +3,24 @@
 <!-- BEGIN_TF_DOCS -->
 
 
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.6.2 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.98 |
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_location"></a> [location](#input\_location) | The region where the resources will be deployed | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | The name of the module | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the Databricks workspace | `string` | n/a | yes |
 | <a name="input_private_subnet_address_prefixes"></a> [private\_subnet\_address\_prefixes](#input\_private\_subnet\_address\_prefixes) | The address prefixes for the private subnet | `list(string)` | n/a | yes |
 | <a name="input_public_subnet_address_prefixes"></a> [public\_subnet\_address\_prefixes](#input\_public\_subnet\_address\_prefixes) | The address prefixes for the public subnet | `list(string)` | n/a | yes |
 | <a name="input_vnet_address_space"></a> [vnet\_address\_space](#input\_vnet\_address\_space) | The address space for the virtual network | `list(string)` | n/a | yes |
 | <a name="input_sku"></a> [sku](#input\_sku) | The SKU of the Databricks workspace | `string` | `"standard"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to the resources | `map(string)` | `{}` | no |
 | <a name="input_vnet_name"></a> [vnet\_name](#input\_vnet\_name) | The name of the virtual network. Defaults to <name>-vnet | `string` | `null` | no |
-## Modules
-
-No modules.
 ## Outputs
 
 | Name | Description |
@@ -38,17 +41,9 @@ No modules.
 | <a name="output_workspace_id"></a> [workspace\_id](#output\_workspace\_id) | ID of the Databricks workspace |
 | <a name="output_workspace_name"></a> [workspace\_name](#output\_workspace\_name) | Name of the Databricks workspace |
 | <a name="output_workspace_url"></a> [workspace\_url](#output\_workspace\_url) | URL of the Databricks workspace |
-## Providers
+## Modules
 
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.98.0 |
-## Requirements
-
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.6.2 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.98 |
+No modules.
 ## Resources
 
 | Name | Type |

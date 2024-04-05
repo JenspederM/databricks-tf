@@ -1,6 +1,6 @@
 variable "name" {
   type        = string
-  description = "The name of the module"
+  description = "The name of the Databricks workspace"
 }
 variable "location" {
   type        = string
