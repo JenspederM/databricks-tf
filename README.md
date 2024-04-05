@@ -9,8 +9,6 @@ This is a template for a full private databricks workspace setup with separated 
 Tools needed to run this project:
 
 - [asdf](https://asdf-vm.com/) - Version manager for programming languages and tools
-- [OpenTofu](https://opentofu.org/) - Infrastructure as code (open source fork of Terraform)
-- [az cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) - Azure command line interface
 
 ### Development
 
@@ -62,23 +60,28 @@ tofu apply
 
 <!-- BEGIN_TF_DOCS -->
 
-
 ## Inputs
 
 No inputs.
+
 ## Modules
 
 No modules.
+
 ## Outputs
 
 No outputs.
+
 ## Providers
 
 No providers.
+
 ## Requirements
 
 No requirements.
+
 ## Resources
 
 No resources.
+
 <!-- END_TF_DOCS -->
