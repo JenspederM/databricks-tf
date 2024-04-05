@@ -29,3 +29,7 @@ gen:
     @echo "Generating the project...\n"
     @terramate generate
 
+val:
+    @echo "Validating the project...\n"
+    @tofu validate
+
