@@ -9,4 +9,8 @@ repos:
   - repo: https://github.com/mineiros-io/pre-commit-hooks
     rev: v0.5.1 # Check for the latest version: https://github.com/mineiros-io/pre-commit-hooks/releases
     hooks:
+      - id: shellcheck
+      - id: terradoc-validate
+      - id: terradoc-fmt
+      - id: terradoc-generate
       - id: terramate-generate
