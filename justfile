@@ -15,9 +15,9 @@ mod name:
     @cp -r ./templates/default-module ./modules/{{name}}
     echo "\n# {{name}}\n<!-- BEGIN_TF_DOCS -->\n\{\{ .Content \}\}\n<!-- END_TF_DOCS -->" > ./modules/{{name}}/README.md
 
-stack account env region name:
-    @echo "Setting the stack account environment region name to {{name}} ...\n"
-    @terramate create ./stacks/{{account}}/{{env}}/{{region}}/{{name}}
+stack account env region stack:
+    @echo "Creating stack at ./stacks/{{account}}/{{env}}/{{region}}/{{stack}} ...\n"
+    @terramate create ./stacks/{{account}}/{{env}}/{{region}}/{{stack}}
 
 run:
     just fmt
@@ -25,18 +25,17 @@ run:
     just doc
     just gen
 
-doc: 
-    @echo "Generating the documentation...\n"
-    @terraform-docs -c .terraform-docs.yml ./modules
 fmt:
     @echo "Formatting the project...\n"
-    @tofu fmt -recursive    
-
-gen:
-    @echo "Generating the project...\n"
-    @terramate generate
 
 val:
     @echo "Validating the project...\n"
     @tofu validate
+    @tofu fmt -recursive
 
+doc: 
+    @echo "Generating the documentation...\n"
+    @terraform-docs -c .terraform-docs.yml ./modules
+gen:
+    @echo "Generating the project...\n"
+    @terramate generate
