@@ -25,6 +25,7 @@ asdf plugin-add terramate
 asdf plugin-add python
 asdf plugin-add pre-commit
 asdf plugin-add terraform-docs
+asdf plugin-add tflint
 
 asdf install
 ```
