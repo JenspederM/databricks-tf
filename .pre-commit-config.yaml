@@ -16,5 +16,5 @@ repos:
         name: terraform-docs
         language: docker_image
         entry: quay.io/terraform-docs/terraform-docs:latest  # or, change latest to pin to a specific version
-        args: ["-c", ".terraform-docs.yml", "."]
+        args: ["-c", ".terraform-docs.yml", "./modules"]
         pass_filenames: false
