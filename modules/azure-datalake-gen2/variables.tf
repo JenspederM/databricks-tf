@@ -21,7 +21,7 @@ variable "access_tier" {
   description = "The access tier of the storage account"
   default     = "Hot"
 }
-variable "enable_sftp" {
+variable "sftp_enabled" {
   type        = bool
   description = "Enable SFTP on the storage account"
   default     = false
@@ -35,6 +35,17 @@ variable "public_network_access_enabled" {
   type        = bool
   description = "Allow public network access to the storage account"
   default     = false
+}
+variable "contributors" {
+  type        = list(string)
+  description = "A list of object ids to assign as 'Storage Blob Data Contributor' to the storage account"
+  default     = []
+
+}
+variable "readers" {
+  type        = list(string)
+  description = "A list of object ids to assign as 'Storage Blob Data Reader' to the storage account"
+  default     = []
 }
 variable "tags" {
   type        = map(string)

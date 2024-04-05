@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "this" {
   cross_tenant_replication_enabled = false
   access_tier                      = var.access_tier
   enable_https_traffic_only        = true
-  sftp_enabled                     = var.enable_sftp
+  sftp_enabled                     = var.sftp_enabled
   allow_nested_items_to_be_public  = var.allow_nested_items_to_be_public
   public_network_access_enabled    = var.public_network_access_enabled
   is_hns_enabled                   = "true" // This makes the storage account a Data Lake Storage Gen2 account.
@@ -28,4 +28,20 @@ resource "azurerm_storage_account" "this" {
   }
 
   tags = var.tags
+}
+
+resource "azurerm_role_assignment" "contributors" {
+  for_each = toset(var.contributors)
+
+  scope                = azurerm_storage_account.this.id
+  role_definition_name = "Storage Blob Data Contributor"
+  principal_id         = each.value
+}
+
+resource "azurerm_role_assignment" "readers" {
+  for_each = toset(var.readers)
+
+  scope                = azurerm_storage_account.this.id
+  role_definition_name = "Storage Blob Data Reader"
+  principal_id         = each.value
 }
