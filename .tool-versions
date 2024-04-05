@@ -4,3 +4,4 @@ terramate 0.6.0
 python 3.10.11
 just 1.25.2
 pre-commit 3.7.0
+terraform-docs 0.17.0

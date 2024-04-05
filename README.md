@@ -24,6 +24,7 @@ asdf plugin-add azure-cli
 asdf plugin-add terramate
 asdf plugin-add python
 asdf plugin-add pre-commit
+asdf plugin-add terraform-docs
 
 asdf install
 ```
@@ -34,4 +35,26 @@ asdf install
 tofu init
 tofu plan
 tofu apply
+```
+
+## Project Structure
+
+```
+.
+    /modules                            # tf modules
+        /<module>                       # Module name
+            /main.tf                    # Main module file
+            /variables.tf               # Module variables
+            /outputs.tf                 # Module outputs
+            /<module>                   # Submodule
+    /stacks                             # Terramate generated stacks
+        /<account>                      # Account name
+            /<env>                      # Environment name
+                /<region>               # Region name
+                    /<stack>            # Stack name
+                        /.stack.tm.hcl  # Terramate stack file
+    /.gitignore                         # Files and directories to be ignored by git
+    /.pre-commit-config.yaml            # Pre-commit configuration
+    /.tool-versions                     # asdf tool versions
+    /justfile                           # Small scripts to make your life easier. Run `just --summary` to see the available commands
 ```
