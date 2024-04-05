@@ -18,10 +18,11 @@ Tools needed to run this project:
 2. Install the required tools
 
 ```bash
+asdf plugin-add just
 asdf plugin-add opentofu
 asdf plugin-add azure-cli
 asdf plugin-add terramate
-asdf plugin-add pythonaz
+asdf plugin-add python
 
 asdf install
 ```
