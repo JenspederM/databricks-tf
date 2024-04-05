@@ -47,6 +47,16 @@ variable "readers" {
   description = "A list of object ids to assign as 'Storage Blob Data Reader' to the storage account"
   default     = []
 }
+variable "delete_retention_days" {
+  type        = number
+  description = "The number of days to retain deleted blobs and containers"
+  default     = 14
+}
+variable "container_delete_retention_days" {
+  type        = number
+  description = "The number of days to retain deleted containers"
+  default     = 7
+}
 variable "tags" {
   type        = map(string)
   description = "A map of tags to add to the resources"

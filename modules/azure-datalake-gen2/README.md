@@ -13,7 +13,9 @@
 | <a name="input_account_replication_type"></a> [account\_replication\_type](#input\_account\_replication\_type) | The replication type of the storage account | `string` | `"LRS"` | no |
 | <a name="input_account_tier"></a> [account\_tier](#input\_account\_tier) | The tier of the storage account | `string` | `"Standard"` | no |
 | <a name="input_allow_nested_items_to_be_public"></a> [allow\_nested\_items\_to\_be\_public](#input\_allow\_nested\_items\_to\_be\_public) | Allow nested items to be public | `bool` | `false` | no |
+| <a name="input_container_delete_retention_days"></a> [container\_delete\_retention\_days](#input\_container\_delete\_retention\_days) | The number of days to retain deleted containers | `number` | `7` | no |
 | <a name="input_contributors"></a> [contributors](#input\_contributors) | A list of object ids to assign as 'Storage Blob Data Contributor' to the storage account | `list(string)` | `[]` | no |
+| <a name="input_delete_retention_days"></a> [delete\_retention\_days](#input\_delete\_retention\_days) | The number of days to retain deleted blobs and containers | `number` | `14` | no |
 | <a name="input_public_network_access_enabled"></a> [public\_network\_access\_enabled](#input\_public\_network\_access\_enabled) | Allow public network access to the storage account | `bool` | `false` | no |
 | <a name="input_readers"></a> [readers](#input\_readers) | A list of object ids to assign as 'Storage Blob Data Reader' to the storage account | `list(string)` | `[]` | no |
 | <a name="input_sftp_enabled"></a> [sftp\_enabled](#input\_sftp\_enabled) | Enable SFTP on the storage account | `bool` | `false` | no |
