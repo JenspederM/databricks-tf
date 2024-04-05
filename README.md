@@ -23,6 +23,7 @@ asdf plugin-add opentofu
 asdf plugin-add azure-cli
 asdf plugin-add terramate
 asdf plugin-add python
+asdf plugin-add pre-commit
 
 asdf install
 ```

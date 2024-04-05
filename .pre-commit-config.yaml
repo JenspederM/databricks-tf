@@ -1,16 +1,15 @@
 repos:
-  - repo: https://github.com/mineiros-io/pre-commit-hooks
-    rev: 0.5.1 # Check for the latest version: https://github.com/mineiros-io/pre-commit-hooks/releases
+  - repo: https://github.com/tofuutils/pre-commit-opentofu
+    rev: v1.0.2 # Get the latest from: https://github.com/tofuutils/pre-commit-opentofu/releases
     hooks:
       - id: tofu_fmt
       - id: tofu_validate
       - id: tofu_tflint
-      - id: markdown-link-check
-        args: [-p] # When adding the -p flag, markdown-link-check will always with an exit code 0, even if dead links are found
-      - id: shellcheck
       - id: tofu_docs
+  - repo: https://github.com/mineiros-io/pre-commit-hooks
+    rev: v0.5.1 # Check for the latest version: https://github.com/mineiros-io/pre-commit-hooks/releases
+    hooks:
       - id: terramate-generate
-
       # The following hooks are redundant when golangci-lint is being. Our recommendation is to use golangci-lint
       # as the main linter for go since it enables you to run all available linters in parallel.
       # For details please see the example configuration https://github.com/mineiros-io/pre-commit-hooks/blob/master/.golangci.example.yml
