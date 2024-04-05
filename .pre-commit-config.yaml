@@ -9,8 +9,12 @@ repos:
   - repo: https://github.com/mineiros-io/pre-commit-hooks
     rev: v0.5.1 # Check for the latest version: https://github.com/mineiros-io/pre-commit-hooks/releases
     hooks:
-      - id: shellcheck
-      - id: terradoc-validate
-      - id: terradoc-fmt
-      - id: terradoc-generate
       - id: terramate-generate
+  - repo: local
+    hooks:
+      - id: terraform-docs
+        name: terraform-docs
+        language: docker_image
+        entry: quay.io/terraform-docs/terraform-docs:latest  # or, change latest to pin to a specific version
+        args: ["-c", ".terraform-docs.yml", "."]
+        pass_filenames: false
