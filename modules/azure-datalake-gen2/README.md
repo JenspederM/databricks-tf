@@ -13,6 +13,7 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_location"></a> [location](#input\_location) | The location of the storage account | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name of the storage account | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group | `string` | n/a | yes |
 | <a name="input_access_tier"></a> [access\_tier](#input\_access\_tier) | The access tier of the storage account | `string` | `"Hot"` | no |
@@ -41,5 +42,4 @@ No modules.
 | [azurerm_role_assignment.contributors](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_role_assignment.readers](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_storage_account.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
-| [azurerm_resource_group.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/resource_group) | data source |
 <!-- END_TF_DOCS -->
