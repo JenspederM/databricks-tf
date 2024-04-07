@@ -10,11 +10,10 @@ repos:
     rev: v0.5.1 # Check for the latest version: https://github.com/mineiros-io/pre-commit-hooks/releases
     hooks:
       - id: terramate-generate
-  - repo: local
+  - repo: https://github.com/terraform-docs/terraform-docs
+    rev: v0.17.0
     hooks:
-      - id: terraform-docs
+      - id: terraform-docs-go
         name: terraform-docs
-        language: docker_image
-        entry: quay.io/terraform-docs/terraform-docs:latest  # or, change latest to pin to a specific version
         args: ["-c", ".terraform-docs.yml", "./modules"]
         pass_filenames: false
