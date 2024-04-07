@@ -1,21 +1,18 @@
 <!-- BEGIN_TF_DOCS -->
 
 
-## Inputs
-
-No inputs.
-## Modules
-
-No modules.
-## Outputs
-
-No outputs.
-## Providers
-
-No providers.
 ## Requirements
 
 No requirements.
+## Inputs
+
+No inputs.
+## Outputs
+
+No outputs.
+## Modules
+
+No modules.
 ## Resources
 
 No resources.

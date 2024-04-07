@@ -65,28 +65,31 @@ tofu apply
 
 <!-- BEGIN_TF_DOCS -->
 
-## Inputs
-
-No inputs.
-
-## Modules
-
-No modules.
-
-## Outputs
-
-No outputs.
-
-## Providers
-
-No providers.
 
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.6.2 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.98 |
+| <a name="requirement_databricks"></a> [databricks](#requirement\_databricks) | ~>1.31 |
+## Inputs
 
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_location"></a> [location](#input\_location) | The region where the resources will be deployed | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to the resources | `map(string)` | `{}` | no |
+## Outputs
+
+No outputs.
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_metastore"></a> [metastore](#module\_metastore) | ./modules/databricks/metastore | n/a |
+| <a name="module_metastore_assignment"></a> [metastore\_assignment](#module\_metastore\_assignment) | ./modules/databricks/metastore-assignment | n/a |
+| <a name="module_workspace"></a> [workspace](#module\_workspace) | ./modules/azure/databricks-workspace | n/a |
 ## Resources
 
 No resources.
-
 <!-- END_TF_DOCS -->

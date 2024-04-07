@@ -25,7 +25,6 @@ resource "azurerm_storage_account" "this" {
 
   tags = var.tags
 }
-
 resource "azurerm_role_assignment" "contributors" {
   for_each = toset(var.contributors)
 
@@ -33,7 +32,6 @@ resource "azurerm_role_assignment" "contributors" {
   role_definition_name = "Storage Blob Data Contributor"
   principal_id         = each.value
 }
-
 resource "azurerm_role_assignment" "readers" {
   for_each = toset(var.readers)
 
