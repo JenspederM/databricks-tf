@@ -12,13 +12,8 @@ commit MESSAGE *FLAGS:
 
 mod provider name:
     @echo "Creating module '{{name}}' ...\n"
-    @if [ -d "./modules/{{provider}}/{{name}}" ]; then \
-        echo "Module '{{name}}' already exists for '{{provider}}'!"; \
-        exit 1; \
-    fi
-    @mkdir -p ./modules/{{provider}}
-    @cp -r ./templates/default-module ./modules/{{provider}}/{{name}}
-    @echo "\n# {{name}}\n<!-- BEGIN_TF_DOCS -->\n\{\{ .Content \}\}\n<!-- END_TF_DOCS -->" > ./modules/{{provider}}/{{name}}/README.md
+    @./scripts/new-module.bash {{provider}} {{name}}
+    
 
 stack account env region stack:
     @echo "Creating stack at ./stacks/{{account}}/{{env}}/{{region}}/{{stack}} ...\n"
