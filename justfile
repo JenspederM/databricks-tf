@@ -11,9 +11,9 @@ commit MESSAGE *FLAGS:
     git commit {{FLAGS}} -m "{{MESSAGE}}"
 
 mod name:
-    @echo "Setting the module name to {{name}} ...\n"
+    @echo "Creating module '{{name}}' ...\n"
     @cp -r ./templates/default-module ./modules/{{name}}
-    echo "\n# {{name}}\n<!-- BEGIN_TF_DOCS -->\n\{\{ .Content \}\}\n<!-- END_TF_DOCS -->" > ./modules/{{name}}/README.md
+    @echo "\n# {{name}}\n<!-- BEGIN_TF_DOCS -->\n\{\{ .Content \}\}\n<!-- END_TF_DOCS -->" > ./modules/{{name}}/README.md
 
 stack account env region stack:
     @echo "Creating stack at ./stacks/{{account}}/{{env}}/{{region}}/{{stack}} ...\n"
