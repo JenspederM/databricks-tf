@@ -1,5 +1,5 @@
 module "workspace" {
-  source = "./modules/azure/databricks-workspace"
+  source = "./modules/azure-databricks-workspace"
 
   name                            = "databricks-workspace"
   location                        = var.location
@@ -11,7 +11,7 @@ module "workspace" {
 }
 
 module "metastore" {
-  source = "./modules/databricks/metastore"
+  source = "./modules/databricks-metastore"
   providers = {
     databricks = databricks.account
   }
@@ -23,7 +23,7 @@ module "metastore" {
 }
 
 module "metastore_assignment" {
-  source = "./modules/databricks/metastore-assignment"
+  source = "./modules/databricks-metastore-assignment"
   providers = {
     databricks = databricks.workspace
   }

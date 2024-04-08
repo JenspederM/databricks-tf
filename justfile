@@ -10,9 +10,9 @@ commit MESSAGE *FLAGS:
     @just gen
     git commit {{FLAGS}} -m "{{MESSAGE}}"
 
-mod provider name:
+mod name:
     @echo "Creating module '{{name}}' ...\n"
-    @./scripts/new-module.bash {{provider}} {{name}}
+    @./scripts/new-module.bash {{name}}
     
 
 stack account env region stack:
@@ -31,8 +31,8 @@ fmt:
 
 val:
     @echo "Validating the project...\n"
+    @tofu init
     @tofu validate
-    @tofu fmt -recursive
 
 doc: 
     @echo "Generating the documentation...\n"

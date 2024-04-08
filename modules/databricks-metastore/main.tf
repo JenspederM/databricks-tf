@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "this" {
   tags = var.tags
 }
 module "storage" {
-  source = "../../azure/datalake-gen2"
+  source = "../azure-datalake-gen2"
 
   name                            = var.storage_account_name
   resource_group_name             = azurerm_resource_group.this.name

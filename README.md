@@ -86,9 +86,9 @@ No outputs.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_metastore"></a> [metastore](#module\_metastore) | ./modules/databricks/metastore | n/a |
-| <a name="module_metastore_assignment"></a> [metastore\_assignment](#module\_metastore\_assignment) | ./modules/databricks/metastore-assignment | n/a |
-| <a name="module_workspace"></a> [workspace](#module\_workspace) | ./modules/azure/databricks-workspace | n/a |
+| <a name="module_metastore"></a> [metastore](#module\_metastore) | ./modules/databricks-metastore | n/a |
+| <a name="module_metastore_assignment"></a> [metastore\_assignment](#module\_metastore\_assignment) | ./modules/databricks-metastore-assignment | n/a |
+| <a name="module_workspace"></a> [workspace](#module\_workspace) | ./modules/azure-databricks-workspace | n/a |
 ## Resources
 
 No resources.

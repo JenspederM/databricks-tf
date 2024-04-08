@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
-PROVIDER=$1
-MODULE_NAME=$2
+MODULE_NAME=$1
 
 if [ -z "$MODULE_NAME" ]; then
-    echo "Usage: $0 <provider-name> <module-name>"
+    echo "Usage: $0 <module-name>"
     echo "Example: $0 azure resource-group"
     exit 1
 fi
 
-MODULE_DIR="modules/$PROVIDER/$MODULE_NAME"
+MODULE_DIR="modules/$MODULE_NAME"
 
 if [ -d "$MODULE_DIR" ]; then
     echo "Module $MODULE_NAME already exists"
